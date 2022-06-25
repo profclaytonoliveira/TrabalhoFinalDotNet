@@ -1,0 +1,36 @@
+﻿
+@model Cliente
+@{
+    ViewData["Title"] = "Salvar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Cadastrar Clientes
+  </div>
+  <div class="card-body">
+   <form asp-action="Salvar" asp-controller="Manter" method="post">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input asp-for="NomeCliente" type="text" class="form-control" id="nome">       
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input asp-for="Telefone" type="text" class="form-control" id="telefone">       
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input  asp-for="Cpf" type="text" class="form-control" id="cpf">       
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input asp-for="Email" type="email" class="form-control" id="email">       
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a asp-action="listar" asp-controller="Manter" class="btn btn-warning">Lista</a>
+</form>
+  </div>
+</div>
+
